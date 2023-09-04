@@ -509,7 +509,11 @@ paths:
               $ref: '#/components/schemas/Doi'
       responses:
         '201':
-          description: Created
+          description: A JSON object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/Doi'
   '/dois/{id}':
     get:
       parameters:
@@ -1962,7 +1966,7 @@ components:
         url:
           type: string
         contentUrl:
-          readOnly: true
+#          readOnly: true
           type: array
           items:
             type: string
@@ -1995,6 +1999,9 @@ components:
         updated:
           type: string
           readOnly: true
+        published:
+          type: string
+          readOnly: true
     DoiDataObject:
         type: object
         properties:
@@ -2010,6 +2017,8 @@ components:
       type: object
       properties:
         id:
+          type: string
+        title:
           type: string
         type:
           type: string
