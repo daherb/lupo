@@ -1968,6 +1968,7 @@ components:
         contentUrl:
 #          readOnly: true
           type: array
+          nullable: true
           items:
             type: string
         metadataVersion:
