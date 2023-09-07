@@ -1966,11 +1966,11 @@ components:
         url:
           type: string
         contentUrl:
-#          readOnly: true
-          type: array
+          readOnly: true
+#          type: array
           nullable: true
-          items:
-            type: string
+#          items:
+#            type: string
         metadataVersion:
           readOnly: true
           type: number
